@@ -1,0 +1,31 @@
+git config --global user.name "Taha" --> Diğer kullanıcılar bu adı görecek
+git config --global user.email "tahaz@gma" --> Diğer kullanıcılara bu mail gözükecek
+git config --list --> Config bilgilerini verir isim mail vs.
+
+git config --global color.ui true --> bash paneli renklenir.
+--------------------------------
+git init --> Projeyi localde başlatır.  *
+git add . --> Değişiklikleri staging area'ya ekler  *
+git commit -m"Update:" --> StagingArea'daki değişiklikleri commitleyip yeni versiyon oluşturur  *
+git status --> Ne tarz değişiklikler var gösterir. modified || untracked
+git log --> Önceki commitler(versiyonlar) hakkındaki logları gösterir.
+git log --oneline --> Logları ve hashcodelarını tek satırda özetler.
+git show [hashCode] --> Seçilen committe neler yapıldığını detaylıca gösterir.
+git restore . --> Localde Stage'e gönderilmeyen herşeyi ortadan kaldırır.
+git restore --staged . --> Stagedeki değişiklikleri locale(working space) taşır.
+git reset --hard --> Stage ve workingSpaceteki değişiklikleri komple kaldırır.
+git checkout [hashCode] [dosya] --> Dosya hashkodundaki versiyona döner.
+git checkout [hashCode] . --> Direk eski bir versiyona geçilir. (Geçtikten sonra comit atarsak kalıcı olarak yeni versiyon oluşturur.)
+git reset --hard [hashCode] --> Geri dönülemez olarak eski versiyona döner.
+git branch [isim] --> Yeni bir branch(dal) oluşturur.
+git branch --> Branchleri listeler.
+git checkout [gidilecekBranchAdı] --> Branchler arası geçer.
+git merge [kaynakbrach] --> kaynak branch i içinde bulunduğumuz hedef branhe merge eder
+git branch -d [isim] --> Branch'i siler.
+git branch -m[yeniIsim] -- Branch adını değiştirir.
+git clone [https.GitAdresi] --> Projeyi çalışılan klasöre kurar.
+git remote add origin [https.GitAdresi] --> Pushlamak için pushlayacağı adresi 1 kere belirt.Cloud u bağladık.(Sadece init)
+git remote -v --> bağlantı sağlandımı kontrol.(Sadece Init)
+git push -u origin [branch adı] --> İlk pushta bu şekilde göndermek gerkiyor.(Sadece Init)
+git push --> sonraki pushlar için. 
+git pull --> githubdan locale verisiyonu çeker.
